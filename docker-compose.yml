@@ -3,3 +3,5 @@ services:
   mean:
     build:
       context: .
+    ports:
+      - "3000:3000"

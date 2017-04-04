@@ -4,6 +4,6 @@ ENV PROJECT_DIRECTORY="/opt/$PROJECT_NAME/"
 RUN mkdir -p "$PROJECT_DIRECTORY"
 WORKDIR "$PROJECT_DIRECTORY"
 COPY package.json "$PROJECT_DIRECTORY"
-COPY . "$PROJECT_DIRECTORY"
 RUN npm install
-CMD [ "echo", "hi" ]
+COPY . "$PROJECT_DIRECTORY"
+CMD [ "node", "server.js" ]
