@@ -1,10 +1,14 @@
 {
   "name": "super_mean",
   "version": "1.0.0",
-  "description": "",
+  "description": "A starting mean stack, for my side projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:marii-moe/super-mean.git"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +17,7 @@
     "express": "^4.15.2"
   },
   "devDependencies": {
-    "webpack": "^2.3.2",
+    "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
   }
 }
