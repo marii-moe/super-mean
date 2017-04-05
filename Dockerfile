@@ -6,4 +6,4 @@ WORKDIR "$PROJECT_DIRECTORY"
 COPY package.json "$PROJECT_DIRECTORY"
 RUN npm install
 COPY . "$PROJECT_DIRECTORY"
-CMD [ "node", "server.js" ]
+CMD [ "npm","run","dev" ]

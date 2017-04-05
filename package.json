@@ -4,6 +4,8 @@
   "description": "A starting mean stack, for my side projects",
   "main": "index.js",
   "scripts": {
+    "start":"NODE_PATH=$NODE_PATH:./src node server",
+    "dev":"npm start & webpack-dev-server --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
