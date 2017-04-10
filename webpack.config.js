@@ -4,7 +4,7 @@ var path = require('path')
 module.exports = {
   devtool: 'inline-source-map',
   entry: [
-    'webpack-dev-server/client"http://0.0.0.0:8080/',
+    'webpack-dev-server/client?http://0.0.0.0:8080/',
     'webpack/hot/only-dev-server',
     './src/'
   ],
@@ -13,8 +13,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    modulesDirectories: ['node_modules', 'src'],
-    extensions: ['', '.js']
+    modules: [
+      path.resolve('node_modules'),
+      path.resolve('src')
+    ]
   },
   module:
   {
@@ -26,7 +28,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   devServer: {
     hot: true,
