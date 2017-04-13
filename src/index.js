@@ -1,2 +1,4 @@
-const message = 'Hello from the entry file'
-consol.log(message)
+import angular from 'angular'
+import appModule from 'config'
+
+angular.bootstrap(document, [appModule.name])

@@ -4,8 +4,8 @@
   "description": "A starting mean stack, for my side projects",
   "main": "index.js",
   "scripts": {
-    "start":"NODE_PATH=$NODE_PATH:./src node server",
-    "dev":"npm start & webpack-dev-server --host 0.0.0.0 --progress --colors",
+    "start": "NODE_PATH=$NODE_PATH:./src node server",
+    "dev": "npm start & webpack-dev-server --host 0.0.0.0 --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,12 +16,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^0.4.2",
     "express": "^4.15.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-preset-es2017": "^6.22.0",
+    "raw-loader": "^0.5.1",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
   }

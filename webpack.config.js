@@ -18,13 +18,18 @@ module.exports = {
       path.resolve('src')
     ]
   },
-  module:
-  {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader'
-    }]
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw-loader'
+      }
+    ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
