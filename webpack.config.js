@@ -16,7 +16,8 @@ module.exports = {
     modules: [
       path.resolve('node_modules'),
       path.resolve('src')
-    ]
+    ],
+    extensions: [ '.js', '.json', '.scss']
   },
   module: {
     loaders: [
@@ -28,6 +29,15 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'raw-loader'
+      },
+      {
+        test: /\.scss$/,
+        loaders: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader?browsers=last 3 versions',
+          'sass-loader?outputStyle=expanded'
+        ]
       }
     ]
   },
